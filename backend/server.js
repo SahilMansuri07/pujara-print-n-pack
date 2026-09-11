@@ -24,6 +24,13 @@ app.use(express.json());
 
 app.use("/uploads", express.static("uploads"));
 
+// Unauthenticated health check — lets Render's own health monitor, and an external
+// uptime pinger (e.g. cron-job.org / UptimeRobot hitting this every few minutes),
+// keep the free-tier instance from spinning down after 15 minutes of inactivity.
+app.get("/health", (_req, res) => {
+  res.status(200).json({ status: "ok", uptime: process.uptime(), timestamp: new Date().toISOString() });
+});
+
 app.use(middleware.checkAPI);
 
 // API Routes
