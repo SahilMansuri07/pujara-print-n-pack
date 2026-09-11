@@ -1,0 +1,70 @@
+import express from "express";
+import pool from "./config/db.js";
+import dotenv from "dotenv";
+import middleware from "./middleware/middleware.js";
+import userRoutes from "./modules/v1/user/user-routes.js";
+import aboutRoutes from "./modules/v1/about/about-routes.js";
+import cors from "cors";
+
+dotenv.config();
+
+const PORT = process.env.PORT || 5020;
+const app = express();
+
+const corsOrigins = (process.env.CORS_ORIGIN || "http://localhost:3000").split(",").map(origin => origin.trim());
+app.use(cors({
+  origin: corsOrigins,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  credentials: true
+}));
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
+
+app.use("/uploads", express.static("uploads"));
+
+app.use(middleware.checkAPI);
+
+// API Routes
+app.use("/api/v1/user/", userRoutes);
+app.use("/api/v1/user/", aboutRoutes);
+
+//uploads folder for static files
+
+// Test database connection
+async function testDbConnection() {
+  try {
+    const connection = await pool.getConnection();
+    await connection.ping();
+    connection.release();
+    console.log("✓ Database connection established successfully");
+    return true;
+  } catch (error) {
+    console.error("✗ Database connection failed:", error.message);
+    return false;
+  }
+}
+
+
+// Start server
+async function startServer() {
+  try {
+    const isConnected = await testDbConnection();
+    if (!isConnected) {
+      process.exit(1);
+    }
+    
+    // startCronJobs();
+    app.listen(PORT, () => {
+      console.log(`✓ Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Error starting server:", error);
+    process.exit(1);
+  }
+}
+
+startServer();
+
+ 

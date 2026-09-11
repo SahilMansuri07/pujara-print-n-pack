@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "happyClients": "10K+",
+    "projectsCompleted": "25K+",
+    "onTimeDelivery": "99.5%",
+    "rating": "5"
+  },
+  "timeline": [
+    {
+      "year": "2007",
+      "title": "Super Enterprises Founded",
+      "description": "Our journey began in Mumbai as Super Enterprises, a small print shop built on precision and a promise to never miss a deadline."
+    },
+    {
+      "year": "2011",
+      "title": "Reborn as Pujara Print N Pack",
+      "description": "As demand grew beyond print into packaging and branding, we relaunched as Pujara Print N Pack with new machinery and a wider service range."
+    },
+    {
+      "year": "Present",
+      "title": "Mumbai's Trusted Print & Packaging Partner",
+      "description": "Today we serve thousands of businesses with offset & digital print, corporate gifting, packaging, signage and more, backed by a 99.5% on-time delivery record."
+    }
+  ],
+  "coreValues": [
+    {
+      "title": "Quality Standards",
+      "description": "Every job is checked against strict quality benchmarks before it leaves our facility, from proof to final delivery.",
+      "reveal": "Colour-accurate proofing, premium stock and multi-point checks on every single order."
+    },
+    {
+      "title": "Integrity",
+      "description": "Transparent pricing, honest timelines and no surprises. What we commit to is what we deliver.",
+      "reveal": "Clear quotes, honest turnaround estimates, and accountability when things need to change."
+    },
+    {
+      "title": "Customer Service",
+      "description": "A dedicated team that stays with your order from enquiry to doorstep, ready to solve problems fast.",
+      "reveal": "Responsive support, proactive updates, and a single point of contact for every project."
+    }
+  ]
+}

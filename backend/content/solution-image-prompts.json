@@ -1,0 +1,36 @@
+{
+  "mode": "Built-in image_gen",
+  "base": "Use case: photorealistic-natural. Generate ONE finished commercial photograph for a premium printing and packaging portfolio website category card. Portrait 3:4 composition, full-bleed scene, main subjects occupy central 80 percent, crop safe on all edges. Physically plausible objects, authentic tactile surfaces, slight natural imperfections, soft large-window daylight, neutral warm color grading, professional 50mm product photography, realistic shadows and perspective, no CGI appearance, no illustration, no surreal shapes, no plastic-looking paper, no excessive saturation, no glow, no watermark, no overlay text, no border, no collage. Scene: ",
+  "images": [
+    {
+      "slug": "offset-print",
+      "prompt": "A neatly arranged stack of premium offset-printed editorial catalogues, one open with sharp architectural photographs and restrained typesetting, visible layered paper edges, on a warm stone print studio workbench. Close three-quarter product photograph.",
+      "path": "/uploads/solutions/offset-print-studio.webp"
+    },
+    {
+      "slug": "digital-print",
+      "prompt": "A curated fan of digitally printed business cards, a small folded brochure and crisp colorful art postcards, tactile heavy uncoated paper, restrained contemporary geometric print designs, warm stone studio tabletop. Close three-quarter product photograph.",
+      "path": "/uploads/solutions/digital-print-studio.webp"
+    },
+    {
+      "slug": "gifting-ideas",
+      "prompt": "An open premium corporate gift box with fitted compartments containing a matte black insulated bottle, a navy linen notebook and one elegant metal pen. Real kraft board edges, precise construction, warm stone studio tabletop. Close three-quarter product photograph.",
+      "path": "/uploads/solutions/gifting-ideas-studio.webp"
+    },
+    {
+      "slug": "outdoor-work",
+      "prompt": "A professionally installed freestanding roll-up banner and a framed poster in a real bright contemporary showroom entrance. Tasteful geometric navy and terracotta printed graphics, realistic metal hardware, straight architectural perspective. No people. Architectural commercial photograph.",
+      "path": "/uploads/solutions/outdoor-work-studio.webp"
+    },
+    {
+      "slug": "identification",
+      "prompt": "Three neatly arranged professional PVC employee badge cards with small abstract geometric identity marks and blank neutral identity fields, two navy woven lanyards with physically correct metal swivel clips on warm stone tabletop. No personal details, no faces. Close product photograph with realistic fabric texture.",
+      "path": "/uploads/solutions/identification-studio.webp"
+    },
+    {
+      "slug": "finishing",
+      "prompt": "Close product photograph of three premium bound sample books and a die-cut presentation folder on warm stone print studio tabletop, one navy cover with subtle gold foil geometric linework, one cream cover with blind embossing, sharply visible binding and paper edges. Tactile, refined print finishing.",
+      "path": "/uploads/solutions/finishing-studio.webp"
+    }
+  ]
+}

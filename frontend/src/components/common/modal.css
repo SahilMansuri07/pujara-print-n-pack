@@ -1,0 +1,26 @@
+.app-modal-backdrop { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(18,10,28,.55); backdrop-filter: blur(2px); animation: app-modal-fade .2s ease; }
+.app-modal { position: relative; width: 100%; max-width: 560px; max-height: min(85vh,720px); overflow-y: auto; border-radius: 20px; background: white; box-shadow: 0 30px 70px -20px rgba(20,10,30,.5); animation: app-modal-pop .25s cubic-bezier(.22,1,.36,1); }
+.app-modal-close { position: absolute; top: 14px; right: 14px; z-index: 1; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.9); color: #242234; box-shadow: 0 4px 12px rgba(0,0,0,.15); cursor: pointer; }
+.app-modal-media { position: relative; width: 100%; aspect-ratio: 16/9; background: #f4eff7; overflow: hidden; }
+.app-modal-media img { width: 100%; height: 100%; object-fit: cover; }
+.app-modal-body { padding: 22px 26px 26px; }
+.app-modal-tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; margin-bottom: 10px; background: #f6effa; color: #562c8c; }
+.app-modal-body h2 { font-size: 21px; font-weight: 800; color: #242234; line-height: 1.3; }
+.app-modal-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 11.5px; color: #8a8394; margin-top: 8px; }
+.app-modal-desc { margin-top: 14px; font-size: 13.5px; line-height: 1.85; color: #4a4453; overflow-wrap: anywhere; }
+.app-modal-desc:not(:has(> *)) { white-space: pre-wrap; }
+.app-modal-desc p { margin-block: 12px; }
+.app-modal-desc h2 { font-size: 17px; font-weight: 700; margin-block: 18px 8px; }
+.app-modal-desc h3 { font-size: 15px; font-weight: 700; margin-block: 14px 6px; }
+.app-modal-desc ul, .app-modal-desc ol { margin-block: 12px; padding-left: 20px; }
+.app-modal-desc li { margin-block: 4px; }
+.app-modal-desc a { color: #673397; text-decoration: underline; }
+.app-modal-desc img { max-width: 100%; border-radius: 8px; margin-block: 12px; }
+.app-modal-loading { padding: 40px 0; text-align: center; font-size: 13px; color: #8a8394; }
+.app-modal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.app-modal-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-size: 12.5px; font-weight: 700; color: white; background: linear-gradient(110deg,#25d366,#1fae57); }
+.app-modal-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-size: 12.5px; font-weight: 700; color: #4a4453; border: 1px solid #e6dfea; }
+@keyframes app-modal-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes app-modal-pop { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .app-modal-backdrop, .app-modal { animation: none; } }
+@media(max-width:560px) { .app-modal { max-height: 92vh; border-radius: 16px; } .app-modal-body { padding: 18px 18px 22px; } }

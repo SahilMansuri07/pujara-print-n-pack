@@ -1,0 +1,191 @@
+[
+  {
+    "id": 36,
+    "slug": "axelon",
+    "url": "https://axeloninternational.com/assets/images/resources/logo.png",
+    "source": "https://axeloninternational.com",
+    "file": "axelon.png"
+  },
+  {
+    "id": 37,
+    "slug": "dachser",
+    "url": "https://www.dachser.in/images/layout/dachser-logo-2021.svg",
+    "source": "https://www.dachser.in",
+    "file": "dachser.svg"
+  },
+  {
+    "id": 42,
+    "slug": "hcl",
+    "url": "https://hcl.com/wp-content/themes/Hcl/img/logo.png",
+    "source": "https://hcl.com",
+    "file": "hcl.png"
+  },
+  {
+    "id": 44,
+    "slug": "maxheal",
+    "url": "https://maxheal.in/wp-content/uploads/2024/10/Max-Heal-Logo-Smalla.png",
+    "source": "https://maxheal.in",
+    "file": "maxheal.png"
+  },
+  {
+    "id": 45,
+    "slug": "realme",
+    "url": "https://image01.realme.net/general/20181218/1545105227803.png",
+    "source": "https://www.realme.com/in/",
+    "file": "realme.png"
+  },
+  {
+    "id": 46,
+    "slug": "den-networks",
+    "url": "https://dennetworks.com/assets/img/logo.png",
+    "source": "https://dennetworks.com",
+    "file": "den-networks.png"
+  },
+  {
+    "id": 47,
+    "slug": "saregama",
+    "url": "https://r.saregama.com/resources/images/logo.png",
+    "source": "https://www.saregama.com",
+    "file": "saregama.png"
+  },
+  {
+    "id": 48,
+    "slug": "wahl",
+    "url": "https://in.wahl.com/hubfs/global-files/wahl-logo-black.png",
+    "source": "https://in.wahl.com",
+    "file": "wahl.png"
+  },
+  {
+    "id": 49,
+    "slug": "sula",
+    "url": "https://sulavineyards.com/images/media2/home-page/sula-logo-main.png",
+    "source": "https://sulavineyards.com/our-history.php",
+    "file": "sula.png"
+  },
+  {
+    "id": 50,
+    "slug": "neulife",
+    "url": "https://neulife.com/cdn/shop/files/Neulife_white__header.png?v=1697019875",
+    "source": "https://neulife.com",
+    "file": "neulife.png"
+  },
+  {
+    "id": 59,
+    "slug": "time-technoplast",
+    "url": "https://www.timetechnoplast.com/wp-content/uploads/2017/10/time-logo-new.png",
+    "source": "https://www.timetechnoplast.com",
+    "file": "time-technoplast.png"
+  },
+  {
+    "id": 60,
+    "slug": "zoetis",
+    "url": "https://www.zoetis.com/_assets/img/zoetis_logo.svg",
+    "source": "https://www.zoetis.com",
+    "file": "zoetis.svg"
+  },
+  {
+    "id": 63,
+    "slug": "sany",
+    "url": "https://www.sanyglobal.com/static/new/img/logo.svg",
+    "source": "https://www.sanyglobal.com/static/new/img/logo.svg",
+    "file": "sany.svg"
+  },
+  {
+    "id": 64,
+    "slug": "mahindra-logistics",
+    "url": "https://mahindralogistics.com/wp-content/uploads/2021/06/Mahindra-Logistics-Invert.png",
+    "source": "https://mahindralogistics.com",
+    "file": "mahindra-logistics.png"
+  },
+  {
+    "id": 38,
+    "slug": "oppo",
+    "file": "oppo.svg",
+    "source": "https://www.oppo.com/in/",
+    "url": "Official header inline SVG"
+  },
+  {
+    "id": 62,
+    "slug": "vivo",
+    "file": "vivo.svg",
+    "source": "https://www.vivo.com/in/",
+    "url": "Official header inline SVG"
+  },
+  {
+    "id": 33,
+    "slug": "advanced-bolting",
+    "url": "https://absgroupglobal.com/public/front/img/logo/logo.png",
+    "source": "https://absgroupglobal.com",
+    "file": "advanced-bolting.png"
+  },
+  {
+    "id": 35,
+    "slug": "avon-corporation",
+    "url": "https://trademarking.in/details/00/01/77/80/27.jpg",
+    "source": "https://trademarking.in/details/A-avon-Corporation-Ltd-label-1778027.html",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "id": 55,
+    "slug": "valecha",
+    "url": "https://valecha.in/uploads/09062026/1781007755_cdd0fe42a18d1a739528.png",
+    "source": "https://valecha.in",
+    "file": "valecha.png"
+  },
+  {
+    "id": 56,
+    "slug": "viacom",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Viacom.svg",
+    "source": "https://en.wikipedia.org/wiki/Viacom_(2005%E2%80%932019)",
+    "file": "viacom.svg"
+  },
+  {
+    "id": 57,
+    "slug": "woolworths",
+    "url": "https://www.woolworthsgroup.com.au/content/dam/wwg/wwg-assets/woolworths_group_100_years_logo_without_tag.svg",
+    "source": "https://www.woolworthsgroup.com.au",
+    "file": "woolworths.svg"
+  },
+  {
+    "id": 58,
+    "slug": "cheminova",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cheminova.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Cheminova.svg",
+    "file": "cheminova.svg"
+  },
+  {
+    "id": 61,
+    "slug": "bharat-realty",
+    "url": "https://bharatrealty.in/wp-content/uploads/2022/03/bharat-logo-web.webp",
+    "source": "https://bharatrealty.in",
+    "file": "bharat-realty.webp"
+  },
+  {
+    "id": 53,
+    "slug": "tnt",
+    "url": "https://www.tnt.com/dam/tnt_express_media/en_gb/images/ChoosingTNT/TNT-Logo-edt.png",
+    "source": "https://www.tnt.com/dam/tnt_express_media/en_gb/images/ChoosingTNT/TNT-Logo-edt.png",
+    "file": "tnt.png"
+  },
+  {
+    "id": 54,
+    "slug": "utv",
+    "url": "https://www.logo.wine/a/logo/UTV_Software_Communications/UTV_Software_Communications-Logo.wine.svg",
+    "source": "https://www.logo.wine/a/logo/UTV_Software_Communications/UTV_Software_Communications-Logo.wine.svg",
+    "file": "utv.svg"
+  },
+  {
+    "id": 39,
+    "slug": "dhfl",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/DHFL_Brand_Logo.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/DHFL_Brand_Logo.png",
+    "file": "dhfl.png"
+  },
+  {
+    "id": 41,
+    "slug": "glass-glazing",
+    "url": "https://apt.co/wp-content/themes/apt/assets/images/logo.png",
+    "source": "https://apt.co/wp-content/themes/apt/assets/images/logo.png",
+    "file": "glass-glazing.png"
+  }
+]

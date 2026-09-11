@@ -1,0 +1,38 @@
+{
+  "recent_work": {
+    "eyebrow": "Our Recent Work",
+    "title": "Ideas We Print. Brands We Build.",
+    "description": "Creative solutions. Premium quality.\nResults that drive impact.",
+    "link_label": "View Full Portfolio"
+  },
+  "meta_title": "Our Portfolio | Pujara Print N Pack",
+  "meta_description": "A curated selection of print, packaging and branded experiences crafted to make businesses unforgettable.",
+  "eyebrow": "Our Portfolio",
+  "headline": "Ideas You Can See.",
+  "headline_accent": "Quality You Can Feel.",
+  "intro": "A curated selection of print, packaging and branded experiences crafted to make businesses unforgettable.",
+  "hero_image": "/uploads/portfolio/hero-branded-merchandise-collection.png",
+  "hero_alt": "Pujara branded packaging, bags, notebooks and merchandise",
+  "stat_value": "25K+",
+  "stat_label": "Projects Delivered",
+  "signature": "Good design. Great print. Lasting impact.",
+  "all_label": "All Work",
+  "featured_title": "Featured Work",
+  "featured_description": "A closer look at the work that speaks for itself.",
+  "view_label": "View Project",
+  "empty_message": "No projects in this category yet.",
+  "ribbon_title": "From the smallest detail to the biggest impression.",
+  "ribbon_tag": "Your vision. Premium execution.",
+  "brand_title": "Built for Brands\nThat Refuse to Blend In",
+  "benefits": [
+    { "title": "Premium Materials", "description": "Thoughtfully selected for lasting impressions", "icon": "gem" },
+    { "title": "Precision Finishing", "description": "Every detail crafted to perfection", "icon": "badge" },
+    { "title": "Reliable Delivery", "description": "On time. Every time.", "icon": "truck" }
+  ],
+  "cta_title": "Have a Project in Mind?",
+  "cta_description": "Let's bring your ideas to life with high-quality print and packaging solutions.",
+  "cta_primary_label": "Get Free Quote",
+  "cta_primary_url": "/contact-us",
+  "cta_secondary_label": "View Services",
+  "cta_secondary_url": "/services"
+}

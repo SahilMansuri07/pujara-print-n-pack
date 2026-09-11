@@ -1,0 +1,19 @@
+{
+  "title": "Brands We've Helped",
+  "title_accent": "Move Forward",
+  "subtitle": "Different industries. Common goal. A stronger tomorrow through print.",
+  "pause_label": "Pause",
+  "resume_label": "Resume",
+  "industry_title": "Relationships Across",
+  "industry_title_accent": "Industries",
+  "industry_subtitle": "Trusted by businesses across diverse sectors.",
+  "industry_signature": "Different Industries. A Stronger Tomorrow.",
+  "industries": [
+    { "slug": "manufacturing", "name": "Manufacturing", "description": "Durable print solutions for industrial growth.", "icon": "settings", "color": "pink" },
+    { "slug": "technology", "name": "Technology", "description": "Innovative packaging for forward-thinking brands.", "icon": "cpu", "color": "blue" },
+    { "slug": "finance", "name": "Finance", "description": "Secure, professional print for a trusted image.", "icon": "chart", "color": "green" },
+    { "slug": "retail", "name": "Retail", "description": "Eye-catching packaging that drives sales.", "icon": "bag", "color": "pink" },
+    { "slug": "logistics", "name": "Logistics", "description": "Sturdy, reliable print for a moving world.", "icon": "truck", "color": "blue" },
+    { "slug": "corporate-services", "name": "Corporate Services", "description": "Branded materials that build stronger businesses.", "icon": "building", "color": "green" }
+  ]
+}

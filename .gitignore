@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+frontend/.next/
+frontend/out/
+frontend/tsconfig.tsbuildinfo
+
+# Env files with real secrets (keep .env.example)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Scratch / working folders
+.tmp/
+
+# Seed / data-population tooling (not needed to run the app)
+backend/seeds/
+
+# Database dumps — may contain password hashes and customer PII, never commit
+*.sql
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
