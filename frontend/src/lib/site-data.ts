@@ -48,7 +48,7 @@ export const siteConfig = {
   secondaryPhone: "+91 98670 44343",
   phoneDisplay: "+91 98198 94284",
   email: "pujarapnp@gmail.com",
-  address: "Unit No. A/07, Ground Floor, Girikunj Industrial Premises CHS Ltd., Off Mahakali Caves Road, Andheri East, Mumbai - 400093",
+  address: "Unit No. A/07, Girikunj Industrial Estate, Off Mahakali Caves Rd, Andheri East, Mumbai, Maharashtra 400093.",
   hoursWeekday: "Mon - Fri: 8:00 AM - 6:00 PM",
   hoursSaturday: "Sat: 9:00 AM - 2:00 PM",
 };
