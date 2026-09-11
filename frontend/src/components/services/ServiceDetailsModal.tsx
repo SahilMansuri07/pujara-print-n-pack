@@ -4,6 +4,7 @@ import { Printer } from "lucide-react";
 import { Modal } from "@/components/common/Modal";
 import { WhatsAppLink } from "@/components/common/WhatsApp";
 import type { Service } from "@/types/service";
+import { resolveImageUrl } from "@/lib/image-url";
 
 export function ServiceDetailsModal({ service, open, onClose }: { service: Service | null; open: boolean; onClose: () => void }) {
   if (!service) return null;
@@ -11,7 +12,7 @@ export function ServiceDetailsModal({ service, open, onClose }: { service: Servi
     <div className="app-modal-media">
       {service.featured_image_url
         // eslint-disable-next-line @next/next/no-img-element
-        ? <img src={service.featured_image_url} alt={service.title} />
+        ? <img src={resolveImageUrl(service.featured_image_url) ?? undefined} alt={service.title} />
         : <div className="flex h-full w-full items-center justify-center"><Printer size={56} className="text-brand-violet/40" aria-hidden="true" /></div>}
     </div>
     <div className="app-modal-body">

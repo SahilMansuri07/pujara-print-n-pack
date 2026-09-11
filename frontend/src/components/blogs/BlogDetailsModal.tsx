@@ -7,6 +7,7 @@ import { Modal } from "@/components/common/Modal";
 import { WhatsAppLink } from "@/components/common/WhatsApp";
 import type { Blog } from "@/services/blogService";
 import type { ApiResponse } from "@/types/api";
+import { resolveImageUrl } from "@/lib/image-url";
 
 export function BlogDetailsModal({ blog, open, onClose }: { blog: Blog | null; open: boolean; onClose: () => void }) {
   const [content, setContent] = useState<string | null>(null);
@@ -34,7 +35,7 @@ export function BlogDetailsModal({ blog, open, onClose }: { blog: Blog | null; o
     <div className="app-modal-media">
       {blog.featured_image_url
         // eslint-disable-next-line @next/next/no-img-element
-        ? <img src={blog.featured_image_url} alt={blog.title} />
+        ? <img src={resolveImageUrl(blog.featured_image_url) ?? undefined} alt={blog.title} />
         : <div className="flex h-full w-full items-center justify-center"><FileText size={56} className="text-brand-violet/40" aria-hidden="true" /></div>}
     </div>
     <div className="app-modal-body">

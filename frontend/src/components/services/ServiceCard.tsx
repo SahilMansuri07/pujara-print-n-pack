@@ -5,6 +5,7 @@ import { Printer } from "lucide-react";
 import type { Service } from "@/types/service";
 import { WhatsAppLink } from "@/components/common/WhatsApp";
 import { ServiceDetailsModal } from "./ServiceDetailsModal";
+import { resolveImageUrl } from "@/lib/image-url";
 
 const categoryAccents = ["violet", "orange", "blue", "green", "pink"] as const;
 const categoryAccentClass: Record<(typeof categoryAccents)[number], string> = {
@@ -31,7 +32,7 @@ export function ServiceCard({ service, view = "grid" }: { service: Service; view
       {service.featured_image_url && failedImage !== service.featured_image_url ? (
         // Hosted API images may come from different image providers.
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={service.featured_image_url} alt={service.title} loading="lazy" className="h-full w-full object-cover" onError={() => setFailedImage(service.featured_image_url)} />
+        <img src={resolveImageUrl(service.featured_image_url) ?? undefined} alt={service.title} loading="lazy" className="h-full w-full object-cover" onError={() => setFailedImage(service.featured_image_url)} />
       ) : <Printer size={56} className="text-brand-violet/40" aria-hidden="true" />}
     </div>
     <div className="service-card-copy">
