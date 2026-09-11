@@ -12,6 +12,11 @@ frontend/tsconfig.tsbuildinfo
 .env.*.local
 !.env.example
 
+# TLS/SSL certificates and keys — never commit
+*.pem
+*.crt
+*.key
+
 # Scratch / working folders
 .tmp/
 
