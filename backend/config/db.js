@@ -22,6 +22,9 @@ function loadSslCa() {
 }
 
 const sslCa = loadSslCa();
+// Local dev against Aiven without a CA cert on hand: still enable TLS (Aiven requires it),
+// just without verifying the certificate chain. Production should keep using DB_SSL_CA.
+const sslOption = sslCa ? { ca: sslCa } : /aivencloud\.com/.test(process.env.DB_HOST || "") ? { rejectUnauthorized: false } : null;
 
 // Create a connection pool for better performance and reliability under production load.
 const db = mysql.createPool({
@@ -38,7 +41,7 @@ const db = mysql.createPool({
   // Forcing IPv4 avoids that class of ETIMEDOUT.
   family: 4,
   connectTimeout: 15000,
-  ...(sslCa ? { ssl: { ca: sslCa } } : {}),
+  ...(sslOption ? { ssl: sslOption } : {}),
 });
 
 // Fail fast and loudly if the pool can't actually reach the database — much easier to

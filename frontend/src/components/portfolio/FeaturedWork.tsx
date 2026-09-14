@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import { ApiImage } from "@/components/home/ApiImage";
 import { Container } from "@/components/ui/Container";
+import { WhatsAppLink } from "@/components/common/WhatsApp";
 import { resolveImageUrl } from "@/lib/image-url";
 import type { PortfolioItem } from "@/services/portfolioService";
 
@@ -15,7 +16,7 @@ function FeaturedCard({ item, number, large }: { item: PortfolioItem; number: st
       {item.category_name && <span className="portfolio-featured-category">{item.category_name}</span>}
       <h3>{item.title}</h3>
       {item.client_name && <p>{item.client_name}</p>}
-      {large && <span className="portfolio-featured-view">View Project</span>}
+      {large && <WhatsAppLink service={item} label={`Get a quote for ${item.title} on WhatsApp`} className="portfolio-featured-view">Get Quote</WhatsAppLink>}
     </div>
   </article>;
 }

@@ -71,6 +71,68 @@
 }
 
 /* List view (desktop/tablet: one wide row per card, image on the left) */
+/* Category filter nav (horizontal scroll, below the banner) */
+.category-filter-nav-wrap { position: relative; display: flex; align-items: center; gap: 8px; padding: 16px 24px; background: #fff; border-bottom: 1px solid #f2edf0; }
+.category-filter-nav { display: flex; gap: 10px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; -webkit-mask-image: linear-gradient(90deg,transparent,#000 16px,#000 calc(100% - 16px),transparent); mask-image: linear-gradient(90deg,transparent,#000 16px,#000 calc(100% - 16px),transparent); }
+.category-filter-nav::-webkit-scrollbar { display: none; }
+.category-filter-nav a { flex: 0 0 auto; padding: 10px 20px; border-radius: 999px; font-size: 12.5px; font-weight: 700; color: #562c8c; background: #f6effa; border: 1px solid transparent; white-space: nowrap; transition: background .18s ease, border-color .18s ease, transform .18s ease; }
+.category-filter-nav a:hover { background: #fff; border-color: #e6dfea; box-shadow: 0 6px 16px #39234c14; transform: translateY(-1px); }
+.category-filter-arrow { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid #e6dfea; color: #673397; background: #fff; cursor: pointer; transition: background .18s ease, opacity .18s ease; }
+.category-filter-arrow:hover:not(:disabled) { background: #f6effa; }
+.category-filter-arrow:disabled { opacity: .3; cursor: default; }
+@media(max-width:580px) {
+  .category-filter-arrow { display: none; }
+  .category-filter-nav-wrap { padding: 12px 16px; }
+}
+
+/* Category showcase (default listing view): hero + auto-scrolling product marquee, per category */
+.category-showcase-list { display: flex; flex-direction: column; gap: 64px; }
+.category-block { scroll-margin-top: 90px; }
+.category-hero { display: flex; flex-wrap: wrap; justify-content: center; gap: 42px; align-items: center; }
+.category-block-reverse .category-hero { flex-direction: row-reverse; }
+.category-hero-copy { flex: 1 1 500px; max-width: 720px; }
+.category-hero-image { flex: 0 1 520px; }
+.category-hero-index { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 700; line-height: 1; color: #f0dcc4; }
+.category-hero-copy h2 { margin-top: 4px; font-size: clamp(24px,2.4vw,32px); font-weight: 800; color: #242234; }
+.category-hero-copy p { margin-top: 14px; font-size: 13.5px; line-height: 1.8; color: #67616f; max-width: 520px; }
+.category-hero-highlights { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+.category-hero-highlights li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #4a4453; }
+.category-hero-highlights li svg { flex: 0 0 auto; color: #ff8a1f; }
+.category-hero-cta { display: inline-flex; align-items: center; margin-top: 22px; padding: 13px 26px; border-radius: 999px; font-size: 11.5px; font-weight: 800; letter-spacing: .3px; color: white; background: linear-gradient(110deg,#6d2fb5,#cd286d 65%,#ff6d0c); }
+.category-hero-image { border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; background: #f4eff7; }
+.category-hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.category-marquee { overflow: hidden; margin-top: 30px; max-width: 1260px; margin-inline: auto; -webkit-mask-image: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask-image: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); }
+.category-marquee-track { display: flex; gap: 16px; width: max-content; margin-inline: auto; animation-name: category-marquee-scroll; animation-timing-function: linear; animation-iteration-count: infinite; }
+.category-marquee:hover .category-marquee-track, .category-marquee:focus-within .category-marquee-track { animation-play-state: paused; }
+@keyframes category-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.category-product-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 30px; max-width: 1260px; margin-inline: auto; }
+.category-product-card { flex: 0 0 auto; width: 168px; }
+.category-product-image { position: relative; aspect-ratio: 1; border-radius: 14px; overflow: hidden; background: #f4eff7; }
+.category-product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.category-product-card:is(:hover, :focus-within) .category-product-image img { transform: scale(1.06); }
+.category-product-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #1a1024; opacity: 0; transition: opacity .25s ease; }
+.category-product-card:is(:hover, :focus-within) .category-product-overlay { opacity: .6; }
+.category-product-quote { position: absolute; inset: 0; margin: auto; width: fit-content; height: fit-content; padding: 9px 18px; border-radius: 999px; font-size: 11px; font-weight: 700; color: white; background: linear-gradient(110deg,#6d2fb5,#cd286d 65%,#ff6d0c); opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
+.category-product-card:is(:hover, :focus-within) .category-product-quote { opacity: 1; transform: translateY(0); }
+.category-product-card > p { margin-top: 10px; font-size: 12.5px; font-weight: 700; color: #4a4453; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  .category-product-image img, .category-product-overlay, .category-product-quote { transition: none; }
+  .category-marquee-track { animation: none; }
+}
+@media(max-width:900px) {
+  .category-hero { flex-direction: column; align-items: stretch; }
+  .category-hero-image { order: -1; aspect-ratio: 16/9; flex-basis: auto; }
+  .category-hero-copy { max-width: none; }
+}
+@media(max-width:580px) {
+  .category-showcase-list { gap: 40px; }
+  .category-hero-index { font-size: 26px; }
+  .category-hero-copy p { font-size: 13px; }
+  .category-product-card { width: 130px; }
+}
+
 @media(min-width:581px) {
   .services-grid-list { grid-template-columns: 1fr; gap: 0; border: 1px solid #eeeaf0; border-radius: 14px; overflow: hidden; }
   .services-grid-list .service-card.service-card-list { display: grid; grid-template-columns: 200px minmax(0,1fr); border: 0; border-radius: 0; border-bottom: 1px solid #eeeaf0; }

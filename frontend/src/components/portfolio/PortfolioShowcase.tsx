@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, Boxes, Gem, Send, Truck, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ApiImage } from "@/components/home/ApiImage";
+import { WhatsAppLink } from "@/components/common/WhatsApp";
 import { resolveImageUrl } from "@/lib/image-url";
 import type { PortfolioCategory, PortfolioContent, PortfolioItem } from "@/services/portfolioService";
 
@@ -48,17 +49,19 @@ export function PortfolioShowcase({ content: c, items, categories, initialCatego
   const icons: Record<string, typeof Gem> = { gem: Gem, badge: BadgeCheck, truck: Truck };
 
   function card(item: PortfolioItem, className = "") {
-    return <button type="button" key={item.id} className={`pf-card ${className}`} onClick={() => { setSelected(item); dialog.current?.showModal(); }} aria-label={`${c.view_label}: ${item.title}`}>
-      <ApiImage src={resolveImageUrl(item.cover_image_url)} alt={item.title} className="pf-card-image" />
-      <span className="pf-card-shade" />
-      <span className="pf-number" aria-hidden="true">{String(item.sort_order).padStart(2, "0")}</span>
-      <span className="pf-card-copy">
-        <span className="pf-category">{item.category_name}</span>
-        <strong>{item.title}</strong>
-        {item.short_description && <span className="pf-description">{item.short_description}</span>}
-        <span className="pf-card-action"><span><ArrowRight size={16} /></span>{className.includes("pf-main") && c.view_label}</span>
-      </span>
-    </button>;
+    return <div key={item.id} className={`pf-card ${className}`}>
+      <button type="button" className="pf-card-trigger" onClick={() => { setSelected(item); dialog.current?.showModal(); }} aria-label={`View details: ${item.title}`}>
+        <ApiImage src={resolveImageUrl(item.cover_image_url)} alt={item.title} className="pf-card-image" />
+        <span className="pf-card-shade" />
+        <span className="pf-number" aria-hidden="true">{String(item.sort_order).padStart(2, "0")}</span>
+        <span className="pf-card-copy">
+          <span className="pf-category">{item.category_name}</span>
+          <strong>{item.title}</strong>
+          {item.short_description && <span className="pf-description">{item.short_description}</span>}
+        </span>
+      </button>
+      <WhatsAppLink service={item} label={`Get a quote for ${item.title} on WhatsApp`} className="pf-card-quote">Get Quote <ArrowRight size={14} /></WhatsAppLink>
+    </div>;
   }
 
   return <main ref={page} className="portfolio-page pf">

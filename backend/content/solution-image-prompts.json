@@ -31,6 +31,42 @@
       "slug": "finishing",
       "prompt": "Close product photograph of three premium bound sample books and a die-cut presentation folder on warm stone print studio tabletop, one navy cover with subtle gold foil geometric linework, one cream cover with blind embossing, sharply visible binding and paper edges. Tactile, refined print finishing.",
       "path": "/uploads/solutions/finishing-studio.webp"
+    },
+    {
+      "slug": "packaging",
+      "prompt": "A curated arrangement of a kraft corrugated shipping mailer open to show its folded construction, a cream folding retail carton and a navy rigid product box, on warm stone tabletop. Packaging products only.",
+      "path": "/uploads/solutions/packaging-studio.webp"
+    },
+    {
+      "slug": "document-scanning",
+      "prompt": "A compact professional document scanner with upright automatic feeder holding paper sheets, one page emerging onto output tray, neatly stacked archive documents beside it on warm stone desk. No copier, laptop or people.",
+      "path": "/uploads/solutions/document-scanning-studio.webp"
+    },
+    {
+      "slug": "xerox-printers-rental",
+      "prompt": "One realistic freestanding white and charcoal multifunction office photocopier with automatic document feeder, small angled control screen and three paper drawers, in a bright contemporary neutral office. Entire machine visible, no brand logos or people.",
+      "path": "/uploads/solutions/xerox-printers-rental-studio.webp"
+    },
+    {
+      "slug": "customized-diaries",
+      "prompt": "Three premium personal diaries, one open showing subtle dated planner grid without readable text, one closed navy leatherette with elastic band, one tan notebook with ribbon bookmark and elegant pen on warm stone tabletop. Clearly planners, not catalogues.",
+      "path": "/uploads/solutions/customized-diaries-studio.webp"
+    },
+    {
+      "slug": "customized-gifts",
+      "prompt": "Curated personalized corporate gifts: a white ceramic mug with small navy geometric emblem, an engraved wood pen holder, a metal keychain and an elegant pen in an open slim presentation case on warm stone tabletop. No bottle or diary.",
+      "path": "/uploads/solutions/customized-gifts-studio.webp"
+    },
+    {
+      "slug": "t-shirts-caps",
+      "prompt": "A neatly laid out cream cotton crewneck T-shirt with small navy abstract chest emblem and a navy cotton baseball cap with matching cream embroidered geometric emblem on warm stone studio table. Full garments legible, textile stitching visible.",
+      "path": "/uploads/solutions/t-shirts-caps-studio.webp"
+    },
+    {
+      "slug": "customized-trophy-plaques",
+      "prompt": "A clear crystal award trophy with angular beveled edges on a dark base, a modest gold metal cup trophy and an upright walnut commemorative plaque with brushed metal inset on warm stone tabletop. Blank engraving plates, realistic glass refraction and metal reflections.",
+      "path": "/uploads/solutions/customized-trophy-plaques-studio.webp"
     }
-  ]
+  ],
+  "additional_base": "Use case: product-mockup. Generate ONE photorealistic commercial photograph for a premium printing and packaging website category hero. Portrait 3:4 composition. Warm neutral studio palette, soft window daylight, realistic tactile materials and shadows, professional 50mm photography. Full-bleed single scene, main products centered with generous crop-safe margin, no collage, no overlay text, no watermark, no logos, no readable lettering, no CGI look. Scene: "
 }

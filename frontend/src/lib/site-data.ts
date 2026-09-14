@@ -283,6 +283,24 @@ export const whyUsItems: WhyUsItem[] = [
   },
 ];
 
+// Short, verifiable capability bullets per service category (services page hero blocks).
+// Deliberately generic — no invented machine brands/models or unverified technical specs.
+export const categoryHighlights: Record<string, string[]> = {
+  "offset-print": ["Sharp, consistent colour reproduction", "From short runs to bulk print jobs", "Premium stock & finishing options", "Ideal for brochures, catalogues & stationery"],
+  "digital-print": ["Fast turnaround for short runs & reprints", "Vivid, consistent colour output", "No offset setup time", "Great for time-sensitive marketing"],
+  "gifting-ideas": ["Custom branding on every item", "Popular for corporate giveaways", "Mugs, diaries, pens & more", "Keeps your brand visible long-term"],
+  "outdoor-work": ["Weather-resistant materials", "Vivid colour, legible from a distance", "Built for storefronts & installations", "Flex, vinyl & backlit options"],
+  "identification": ["Secure, durable card printing", "Consistent standard across your team", "Ideal for offices, schools & events", "Barcode & RF-enabled options"],
+  "finishing": ["Binding, lamination & die-cutting", "Clean folds & accurate cuts", "Turns sheets into a finished product", "Matched to how it will be used"],
+  "packaging": ["Structural design to print finishing", "Protects & presents your product", "Shelf-ready presentation", "Custom sizes & materials"],
+  "document-scanning": ["Scanning up to 600 dpi", "Both sides captured in one pass", "Secure, compliant digital archives", "Delivered via CD, FTP or web"],
+  "xerox-printers-rental": ["Flexible lease terms", "Serviced & ready from day one", "For schools, colleges & offices", "Backed by our support team"],
+  "customized-diaries": ["Premium materials & covers", "Wide range of designs", "Popular year-round corporate gift", "Fully brandable"],
+  "customized-gifts": ["Sourced & branded to your budget", "Wide range of corporate gift items", "Perfect for occasions & milestones", "We help you pick the right product"],
+  "t-shirts-caps": ["Durable, consistent print quality", "Great for teams & events", "Bulk order friendly", "Multiple sizes & colours"],
+  "customized-trophy-plaques": ["Crafted to honour achievements", "Corporate, sports & academic use", "Professional finishing standard", "Personalised engraving/printing"],
+};
+
 export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Quick Links",
