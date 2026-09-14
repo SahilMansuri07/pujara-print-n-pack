@@ -2,19 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "motion/react";
-import { Users, Award, Gauge, Star } from "lucide-react";
+import { Users, Award, Gauge, Printer } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { IconChip } from "@/components/ui/IconChip";
 import type { AboutStats } from "@/services/aboutService";
 import type { AccentColor } from "@/types";
 
-const fallbackStats: AboutStats = { happyClients: "10K+", projectsCompleted: "25K+", onTimeDelivery: "99.5%", rating: "5" };
+const fallbackStats: AboutStats = { yearsExperience: "19+", printSolutions: "59+", serviceCategories: "13+", corporateClients: "32+" };
 
 const cards: { key: keyof AboutStats; label: string; icon: React.ComponentType<{ className?: string }>; accent: AccentColor; suffixOverride?: string }[] = [
-  { key: "happyClients", label: "Happy Clients", icon: Users, accent: "violet" },
-  { key: "projectsCompleted", label: "Projects Completed", icon: Award, accent: "pink" },
-  { key: "onTimeDelivery", label: "On-Time Delivery", icon: Gauge, accent: "green" },
-  { key: "rating", label: "Client Rating", icon: Star, accent: "orange", suffixOverride: "★" },
+  { key: "yearsExperience", label: "Years of Experience", icon: Award, accent: "violet" },
+  { key: "printSolutions", label: "Print & Packaging Solutions", icon: Printer, accent: "pink" },
+  { key: "serviceCategories", label: "Service Categories", icon: Gauge, accent: "green" },
+  { key: "corporateClients", label: "Corporate Clients", icon: Users, accent: "orange" },
 ];
 
 function parseValue(raw: string) {

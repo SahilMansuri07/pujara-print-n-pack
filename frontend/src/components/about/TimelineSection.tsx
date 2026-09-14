@@ -9,7 +9,7 @@ import type { TimelineItem } from "@/services/aboutService";
 const fallbackTimeline: TimelineItem[] = [
   { year: "2007", title: "Super Enterprises Founded", description: "Our journey began in Mumbai as a small print shop built on precision and reliability." },
   { year: "2011", title: "Reborn as Pujara Print N Pack", description: "As demand grew beyond print into packaging and branding, we relaunched with a wider service range." },
-  { year: "Present", title: "Mumbai's Trusted Print & Packaging Partner", description: "We serve thousands of businesses with a 99.5% on-time delivery record." },
+  { year: "Present", title: "Mumbai's Trusted Print & Packaging Partner", description: "We serve corporates across industries with 59+ solutions across 13 categories, all under one roof." },
 ];
 
 type Transition = { duration: number; ease: [number, number, number, number] };

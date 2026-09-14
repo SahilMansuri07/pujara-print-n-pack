@@ -202,28 +202,28 @@ export const processSteps: ProcessStep[] = [
 
 export const statItems: StatItem[] = [
   {
-    icon: Users,
+    icon: Award,
     accent: "violet",
-    value: "10K+",
-    label: "Happy Clients",
+    value: "19+",
+    label: "Years of Experience",
   },
   {
-    icon: Award,
+    icon: Printer,
     accent: "pink",
-    value: "25K+",
-    label: "Projects Completed",
+    value: "59+",
+    label: "Print & Packaging Solutions",
   },
   {
     icon: Gauge,
     accent: "green",
-    value: "99.5%",
-    label: "On-Time Delivery",
+    value: "13+",
+    label: "Service Categories",
   },
   {
-    icon: Star,
+    icon: Users,
     accent: "orange",
-    value: "5★",
-    label: "Client Rating",
+    value: "32+",
+    label: "Corporate Clients",
   },
 ];
 
@@ -264,22 +264,22 @@ export const whyUsItems: WhyUsItem[] = [
   {
     icon: CheckCircle,
     title: "Premium Quality",
-    description: "Top quality prints",
+    description: "Every job is checked against strict colour and finish standards before it leaves our facility.",
   },
   {
     icon: TrendingUp,
     title: "Competitive Pricing",
-    description: "Affordable for all businesses",
+    description: "Transparent, volume-based quotes that work for freelancers and large corporates alike.",
   },
   {
     icon: Rocket,
-    title: "Latest Technology",
-    description: "Modern machines",
+    title: "One-Stop Print Shop",
+    description: "Offset & digital printing, packaging, gifting and signage — 50+ solutions under one roof since 2007.",
   },
   {
     icon: Users,
-    title: "Expert Team",
-    description: "Skilled professionals",
+    title: "Dedicated Support",
+    description: "One point of contact from enquiry to doorstep delivery, ready to solve problems fast.",
   },
 ];
 

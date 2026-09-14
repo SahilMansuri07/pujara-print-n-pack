@@ -1,6 +1,6 @@
 import { apiGet } from "@/lib/api-client";
 
-export interface AboutStats { happyClients: string; projectsCompleted: string; onTimeDelivery: string; rating: string }
+export interface AboutStats { yearsExperience: string; printSolutions: string; serviceCategories: string; corporateClients: string }
 export interface TimelineItem { year: string; title: string; description: string }
 export interface CoreValue { title: string; description: string; reveal: string }
 export interface AboutClient { id: number; company_name: string | null; logo_url: string | null }

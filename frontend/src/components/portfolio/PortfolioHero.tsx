@@ -26,7 +26,7 @@ export function PortfolioHero() {
         </p>
         <div className="portfolio-hero-stat">
           <Boxes size={28} strokeWidth={1.6} aria-hidden="true" />
-          <div><strong>25K+</strong><span>Projects Delivered</span></div>
+          <div><strong>59+</strong><span>Print &amp; Packaging Solutions</span></div>
         </div>
       </motion.div>
       <motion.div
