@@ -1,0 +1,5 @@
+{
+  "mode": "Built-in image_gen",
+  "prompt": "Use case: precise-object-edit. Reference is a website section mockup. Create ONLY the left-side print product artwork as a standalone square image for that section. Preserve the beautiful cream branded packaging box, label roll, navy business cards and brochure, and flowing cyan purple magenta orange ink ribbons behind the products, matching the reference closely. Recompose these products into the lower 75 percent of a square canvas with breathing room, leaving the upper 20 percent plain cream for an HTML experience badge. Background solid warm ivory #fff8f2 merging softly at all four edges. Remove all website headline, description, links, value cards, the 17+ numeral, the years-of-craft circle, crop marks and dots. Preserve Pujara Print N Pack branding on the physical products. Premium realistic paper textures and soft shadows, no new objects. Output only the product artwork, not a website screenshot.",
+  "path": "frontend/public/images/who-we-are-print-craft.webp"
+}

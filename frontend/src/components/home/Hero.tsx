@@ -5,7 +5,6 @@ import { useHeroVideoAnimation, eyebrowVariants, headingVariants, descriptionVar
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import styles from "./Hero.module.css";
-import { IconChip } from "@/components/ui/IconChip";
 import { heroBottomHighlights, heroTrustBadges } from "@/lib/site-data";
 import { ArrowRight, FileText } from "lucide-react";
 
@@ -58,12 +57,9 @@ export function Hero() {
             {/* Bottom highlights grid */}
             <div className={styles.highlights}>
               {heroBottomHighlights.map((item, index) => (
-                <motion.div initial={false} animate={features[index]} variants={featureRowVariants} key={item.title} className="flex gap-3">
-                  <IconChip icon={item.icon} accent={item.accent} size="sm" variant="soft" />
-                  <div className="min-w-0">
-                    <p className="font-semibold text-sm text-ink">{item.title}</p>
-                    <p className="text-xs text-ink-muted">{item.description}</p>
-                  </div>
+                <motion.div initial={false} animate={features[index]} variants={featureRowVariants} key={item.title} className={`${styles.highlightCard} min-w-0`}>
+                  <p className="font-semibold text-sm text-ink">{item.title}</p>
+                  <p className="text-xs text-ink-muted">{item.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -73,12 +69,9 @@ export function Hero() {
           <div className={styles.trustPosition}>
             <motion.div initial={false} animate={trustCard} variants={trustCardVariants} className={styles.trustCard}>
               {heroTrustBadges.map((badge) => (
-                <div key={badge.title} className="flex gap-3">
-                  <IconChip icon={badge.icon} accent={badge.accent} size="sm" variant="soft" />
-                  <div className="min-w-0">
-                    <p className="font-semibold text-sm text-ink leading-tight">{badge.title}</p>
-                    <p className="text-xs text-ink-muted">{badge.description}</p>
-                  </div>
+                <div key={badge.title} className="min-w-0">
+                  <p className="font-semibold text-sm text-ink leading-tight">{badge.title}</p>
+                  <p className="text-xs text-ink-muted">{badge.description}</p>
                 </div>
               ))}
             </motion.div>

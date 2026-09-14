@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { WhoWeAre } from "@/components/home/WhoWeAre";
 import { SolutionsGrid } from "@/components/home/SolutionsGrid";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { RecentWork } from "@/components/home/RecentWork";
@@ -13,10 +14,11 @@ export default async function Home() {
     <>
       <main>
         <Hero />
+        <WhoWeAre />
+        <MachinesSection machines={data.machines} />
         <SolutionsGrid categories={data.serviceCategories} />
         <FeaturedProducts products={data.featuredProducts} />
         <RecentWork projects={data.portfolio} content={data.recentWork} />
-        <MachinesSection machines={data.machines} />
         <HomeSections clients={data.clients} blogs={data.blogs} />
         <CTABand />
       </main>

@@ -19,6 +19,54 @@ body { font-family: Arial, Helvetica, sans-serif; }
 .header-phone small { font-size: 9px; display: block; margin-top: 3px; }
 .header-quote { font-size: 9px; padding: 11px; gap: 8px; }
 .mobile-nav { display: none; }
+
+.who-we-are-section { position: relative; overflow: hidden; padding-block: clamp(32px, 3.5vw, 52px); background: #fff8f2; color: #101036; }
+.who-we-are-section > .container-shell { position: relative; max-width: 1280px; }
+.who-we-are-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 3vw, 48px); align-items: center; }
+.who-we-are-visual { position: relative; min-width: 0; margin-left: -30px; }
+.who-we-are-art { display: block; width: 100%; height: auto; mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent), linear-gradient(to bottom, transparent, black 4%, black 94%, transparent); mask-composite: intersect; }
+.who-we-are-experience { position: absolute; inset: 0 0 auto 9%; display: flex; align-items: flex-start; gap: 12px; }
+.who-we-are-years { font-size: clamp(110px, 13vw, 190px); line-height: .85; font-weight: 800; letter-spacing: -.075em; color: transparent; -webkit-text-stroke: 1px #bd83f7; }
+.who-we-are-seal { display: grid; align-content: center; flex: 0 0 23%; aspect-ratio: 1; margin-top: 4px; border-radius: 50%; background: linear-gradient(125deg, #6732ff 15%, #d938d8 52%, #ff9657 95%); box-shadow: inset -5px 5px 12px #ffffff40; text-align: center; text-transform: uppercase; color: white; font-size: clamp(12px, 1.25vw, 18px); font-weight: 800; line-height: 1.3; }
+.who-we-are-eyebrow { display: block; margin-bottom: 22px; color: #7134ff; text-transform: uppercase; font-size: 14px; font-weight: 800; letter-spacing: 2.6px; }
+.who-we-are-copy h2 { font-size: clamp(32px, 3.6vw, 52px); font-weight: 900; line-height: 1.06; letter-spacing: -.045em; }
+.who-we-are-copy h2 > span { display: block; width: fit-content; color: #d82ba2; background: linear-gradient(100deg, #7731ff, #f226a1 50%, #ff813d); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.who-we-are-description { margin-top: 22px; color: #383454; font-size: clamp(15px, 1.35vw, 19px); line-height: 1.65; max-width: 600px; }
+.who-we-are-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 18px; color: #7134ff; font-size: clamp(15px, 1.4vw, 20px); font-weight: 700; }
+.who-we-are-link svg { transition: transform .2s ease; }
+.who-we-are-link:hover svg { transform: translateX(5px); }
+.who-we-are-link:focus-visible { outline: 2px solid #7134ff; outline-offset: 5px; border-radius: 3px; }
+.who-we-are-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 20px 8px; margin-top: 22px; list-style: none; border: 1px solid #d5bdff; border-radius: 17px; background: #ffffff85; }
+.who-we-are-pillar { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding-inline: 8px; text-align: center; }
+.who-we-are-pillar + .who-we-are-pillar { border-left: 1px solid #d5bdff; }
+.who-we-are-pillar svg { color: #793cff; }
+.who-we-are-pillar:nth-child(2) svg { color: #ff7640; }
+.who-we-are-pillar:nth-child(3) svg { color: #f32996; }
+.who-we-are-pillar h3 { font-size: clamp(11px, 1.05vw, 15px); line-height: 1.3; font-weight: 800; }
+@media (max-width: 900px) {
+  .who-we-are-grid { grid-template-columns: 1fr; gap: 32px; }
+  .who-we-are-visual { width: min(92%, 540px); margin-inline: auto; }
+  .who-we-are-years { font-size: clamp(110px, 25vw, 190px); }
+  .who-we-are-seal { font-size: clamp(11px, 2.6vw, 18px); }
+  .who-we-are-copy { max-width: 640px; margin-inline: auto; width: 100%; }
+  .who-we-are-copy h2 { font-size: clamp(32px, 5.8vw, 48px); }
+  .who-we-are-pillar h3 { font-size: 14px; }
+}
+@media (max-width: 580px) {
+  .who-we-are-section { padding-block: 30px 36px; }
+  .who-we-are-grid { gap: 25px; }
+  .who-we-are-eyebrow { margin-bottom: 16px; font-size: 12px; }
+  .who-desktop-break { display: none; }
+  .who-we-are-pillars { padding: 20px 3px; margin-top: 22px; border-radius: 13px; }
+  .who-we-are-pillar { padding-inline: 6px; gap: 10px; }
+  .who-we-are-pillar h3 { font-size: 11px; }
+  .who-we-are-pillar svg { width: 29px; height: 29px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .who-we-are-visual, .who-we-are-copy { opacity: 1 !important; transform: none !important; }
+  .who-we-are-link svg { transition: none; }
+}
+
 .solutions-section { padding-block: 36px 48px; }
 .solutions-heading { display: flex; align-items: center; justify-content: center; gap: 5px; text-transform: uppercase; font-size: clamp(14px, 1.4vw, 20px); font-weight: 700; margin-bottom: 8px; }
 .solutions-heading::before, .solutions-heading::after { content: ""; width: 25px; height: 1px; margin-inline: 18px; background: linear-gradient(90deg,#633ac3,#f69e67); }
@@ -377,7 +425,7 @@ a,button,input,summary { outline-offset: 4px; }
 .home-api-card p { margin-top: 10px; font-size: 14px; line-height: 1.7; }
 @media(max-width:700px) { .home-api-grid { grid-template-columns: 1fr; } }
 
-.machines-section { padding-block: 20px 92px; }
+.machines-section { padding-block: 20px 32px; }
 .machines-row { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .machine-card { position: relative; overflow: hidden; border-radius: 14px; aspect-ratio: 4 / 3; background: #f2ede6; box-shadow: 0 2px 7px #90643709; cursor: pointer; }
 .machine-card-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0; transition: transform .5s cubic-bezier(.22,1,.36,1); }
@@ -432,7 +480,7 @@ a,button,input,summary { outline-offset: 4px; }
   .machine-card:is(:hover, :focus-visible) p { max-height: 90px; opacity: 1; }
   .machine-card:is(:hover, :focus-visible) .machine-card-icon { opacity: 1; transform: scale(1) rotate(0deg); }
 }
-@media(max-width:900px) { .machines-row { grid-template-columns: repeat(2,minmax(0,1fr)); } .machines-section { padding-block: 16px 60px; } }
+@media(max-width:900px) { .machines-row { grid-template-columns: repeat(2,minmax(0,1fr)); } .machines-section { padding-block: 16px 24px; } }
 @media(max-width:600px) {
   .machines-row { grid-template-columns: 1fr; gap: 14px; }
   .machine-card p { max-height: 140px; opacity: 1; margin-top: 8px; }
