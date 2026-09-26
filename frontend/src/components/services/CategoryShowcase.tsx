@@ -3,7 +3,7 @@ import type { Service, ServiceCategory } from "@/types/service";
 import { WhatsAppLink } from "@/components/common/WhatsApp";
 import { ApiImage } from "@/components/home/ApiImage";
 import { resolveImageUrl } from "@/lib/image-url";
-import { categoryHighlights } from "@/lib/site-data";
+import { categoryHighlights, categorySummaries } from "@/lib/site-data";
 
 const MARQUEE_MIN_ITEMS = 5;
 
@@ -31,16 +31,16 @@ export function CategoryShowcase({ categories, servicesByCategory }: { categorie
     .filter(group => group.services.length > 0);
 
   return <div className="category-showcase-list">
-    {groups.map(({ category, services }, index) => <section key={category.slug} id={`category-${category.slug}`} className={`category-block${index % 2 === 1 ? " category-block-reverse" : ""}`} aria-labelledby={`category-${category.slug}-heading`}>
+    {groups.map(({ category, services }, index) => { const description = categorySummaries[category.slug] ?? category.description; return <section key={category.slug} id={`category-${category.slug}`} className={`category-block${index % 2 === 1 ? " category-block-reverse" : ""}`} aria-labelledby={`category-${category.slug}-heading`}>
       <div className="category-hero">
         <div className="category-hero-copy">
           <span className="category-hero-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
           <h2 id={`category-${category.slug}-heading`}>{category.name}</h2>
-          {category.description && <p>{category.description}</p>}
+          {description && <p>{description}</p>}
           {categoryHighlights[category.slug] && <ul className="category-hero-highlights">
             {categoryHighlights[category.slug].map(item => <li key={item}><Check size={15} aria-hidden="true" /><span>{item}</span></li>)}
           </ul>}
-          <WhatsAppLink service={{ title: category.name, category_name: category.name, short_description: category.description }} label={`Get a quote for ${category.name} on WhatsApp`} className="category-hero-cta">Get Quote</WhatsAppLink>
+          <WhatsAppLink service={{ title: category.name, category_name: category.name, short_description: description }} label={`Get a quote for ${category.name} on WhatsApp`} className="category-hero-cta">Get Quote</WhatsAppLink>
         </div>
         <div className="category-hero-image">
           <ApiImage src={category.image_url} alt={category.name} className="category-hero-img" />
@@ -57,6 +57,6 @@ export function CategoryShowcase({ categories, servicesByCategory }: { categorie
           {services.map(service => <ProductCard key={service.id} service={service} />)}
         </div>
       )}
-    </section>)}
+    </section>; })}
   </div>;
 }

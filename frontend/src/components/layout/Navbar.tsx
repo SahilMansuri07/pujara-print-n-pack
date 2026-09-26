@@ -17,8 +17,10 @@ type NavigationLink = { label: string; href: string };
 
 function NavigationItems({
   categoryLinks,
+  openOnHover = false,
 }: {
   categoryLinks: Record<string, NavigationLink[]>;
+  openOnHover?: boolean;
 }) {
   const pathname = usePathname();
   return (
@@ -35,11 +37,11 @@ function NavigationItems({
               className="nav-item nav-group"
               key={link.label}
               onPointerEnter={(event) => {
-                if (event.pointerType === "mouse")
+                if (openOnHover && event.pointerType === "mouse")
                   event.currentTarget.open = true;
               }}
               onPointerLeave={(event) => {
-                if (event.pointerType === "mouse")
+                if (openOnHover && event.pointerType === "mouse")
                   event.currentTarget.open = false;
               }}
               onKeyDown={(event) => {
@@ -49,7 +51,14 @@ function NavigationItems({
                 }
               }}
             >
-              <summary>
+              <summary
+                onClick={(event) => {
+                  // Hover already opened it; a mouse click must not toggle it shut again.
+                  // Keyboard activation (detail === 0) still toggles normally.
+                  if (openOnHover && event.detail > 0 && event.currentTarget.parentElement?.hasAttribute("open"))
+                    event.preventDefault();
+                }}
+              >
                 {link.label}
                 <ChevronDown size={12} />
               </summary>
@@ -125,7 +134,7 @@ export function Navbar({
           <Logo src={logoUrl} alt={siteName} />
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <NavigationItems categoryLinks={categoryLinks} />
+          <NavigationItems categoryLinks={categoryLinks} openOnHover />
         </nav>
         <a
           href={`tel:${(phone || siteConfig.phone).replace(/[^+0-9]/g, "")}`}

@@ -301,6 +301,12 @@ export const categoryHighlights: Record<string, string[]> = {
   "customized-trophy-plaques": ["Crafted to honour achievements", "Corporate, sports & academic use", "Professional finishing standard", "Personalised engraving/printing"],
 };
 
+// Short showcase copy for categories whose admin description is too long for the hero block.
+export const categorySummaries: Record<string, string> = {
+  "document-scanning": "We convert large or small volumes of paper records into searchable digital files. Our scanners capture colour, greyscale or b/w at up to 600 dpi, scan both sides in one pass, and deliver via CD, FTP or the web — securely and at reasonable rates.",
+  "customized-diaries": "Premium-quality diaries in a wide range of designs for professional and personal use. We also create fully customised, branded diaries for corporates — built with meticulous attention to detail.",
+};
+
 export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Quick Links",
